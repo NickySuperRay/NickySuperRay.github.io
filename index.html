@@ -68,68 +68,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-python-hannota" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/21/python-hannota/" class="article-date">
-  <time datetime="2017-03-21T03:54:21.064Z" itemprop="datePublished">2017-03-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/21/python-hannota/">汉诺塔问题分析与求解</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1.建立递推规则</strong></p>
-<pre><code>思路：将第n个盘子从a放到c可以分三步走：
-1.将n-1个盘子从a经过c放到b
-2.将a中剩下的第n个盘子放到c
-3.将n-1个盘子从b经过a放到b
-即：递推规则为
-move（n,a,b,c）= move（n,a,c,b）、a-》c、move（n,b,a,c）
-</code></pre><p><strong>2.设定递归终结条件</strong></p>
-<pre><code>思路：考虑起始塔剩下2个盘如何移动到目标塔的方法，也分三步
-1.起始塔-》目标塔
-2.起始塔-》第三方塔
-3.第三方塔-》目标塔
-</code></pre><p><strong>3.小技巧</strong></p>
-<pre><code>将所有参数封装到一个长度为4的list中，设为paras，paras[0]存放盘数，paras[1]代表起始塔，paras[2]代表第三方塔，paras[3]代表目标塔。注意递归调用时，参数list的调整。
-</code></pre><p><strong>3.代码实现</strong>  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">def move(paras):</div><div class="line">	if paras[0] == 2:</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[2])</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[3])</div><div class="line">		print(paras[2]+&apos;-&gt;&apos;+paras[3])</div><div class="line">	else:</div><div class="line">		newparas1=[paras[0]-1,paras[1],paras[3],paras[2]]</div><div class="line">		move(newparas1)</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[3])</div><div class="line">		newparas2=[paras[0]-1,paras[2],paras[1],paras[3]]</div><div class="line">		move(newparas2)</div><div class="line"></div><div class="line">move([3,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;])</div></pre></td></tr></table></figure>
-<p><strong>4.实验结果</strong> </p>
-<pre><code>a-&gt;c
-a-&gt;b
-c-&gt;b
-a-&gt;c
-b-&gt;a
-b-&gt;c
-a-&gt;c
-[Finished in 0.2s]
-</code></pre><p><strong> coded by nicky from scuec</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/21/python-hannota/" data-id="cj0j11khv0001k4qujgv24d5i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/21/hello-world/" class="article-date">
@@ -165,7 +103,7 @@ a-&gt;c
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/21/hello-world/" data-id="cj0j11khf0000k4qu8xicq34v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/21/hello-world/" data-id="cj0j15q440000ukquxfzfvon2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,10 +141,6 @@ a-&gt;c
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/03/21/python-hannota/">汉诺塔问题分析与求解</a>
-          </li>
         
           <li>
             <a href="/2017/03/21/hello-world/">Hello World</a>
