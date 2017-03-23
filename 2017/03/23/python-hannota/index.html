@@ -3,20 +3,48 @@
 <head>
   <meta charset="utf-8">
   
-  <title>全家福第一版 | 睿宝之家</title>
+  <title>python实现汉诺塔 | 睿宝之家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一版的全家福，放给大家看看！希望大家喜欢哟。">
+  <meta name="description" content="1.建立递推规则
+思路：将第n个盘子从a放到c可以分三步走：
+1.将n-1个盘子从a经过c放到b
+2.将a中剩下的第n个盘子放到c
+3.将n-1个盘子从b经过a放到b
+即：递推规则为
+move（n,a,b,c）= move（n,a,c,b）、a-》c、move（n,b,a,c）
+2.设定递归终结条件
+思路：考虑起始塔剩下2个盘如何移动到目标塔的方法，也分三步
+1.起始塔-》目标塔
+2.起始塔-》第">
 <meta property="og:type" content="article">
-<meta property="og:title" content="全家福第一版">
-<meta property="og:url" content="http://yoursite.com/2013/07/13/全家福第一版/index.html">
+<meta property="og:title" content="python实现汉诺塔">
+<meta property="og:url" content="http://yoursite.com/2017/03/23/python-hannota/index.html">
 <meta property="og:site_name" content="睿宝之家">
-<meta property="og:description" content="第一版的全家福，放给大家看看！希望大家喜欢哟。">
-<meta property="og:image" content="http://yoursite.com/img/IMG_9186.JPG">
-<meta property="og:updated_time" content="2017-03-23T08:48:13.042Z">
+<meta property="og:description" content="1.建立递推规则
+思路：将第n个盘子从a放到c可以分三步走：
+1.将n-1个盘子从a经过c放到b
+2.将a中剩下的第n个盘子放到c
+3.将n-1个盘子从b经过a放到b
+即：递推规则为
+move（n,a,b,c）= move（n,a,c,b）、a-》c、move（n,b,a,c）
+2.设定递归终结条件
+思路：考虑起始塔剩下2个盘如何移动到目标塔的方法，也分三步
+1.起始塔-》目标塔
+2.起始塔-》第">
+<meta property="og:updated_time" content="2017-03-23T08:57:30.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="全家福第一版">
-<meta name="twitter:description" content="第一版的全家福，放给大家看看！希望大家喜欢哟。">
-<meta name="twitter:image" content="http://yoursite.com/img/IMG_9186.JPG">
+<meta name="twitter:title" content="python实现汉诺塔">
+<meta name="twitter:description" content="1.建立递推规则
+思路：将第n个盘子从a放到c可以分三步走：
+1.将n-1个盘子从a经过c放到b
+2.将a中剩下的第n个盘子放到c
+3.将n-1个盘子从b经过a放到b
+即：递推规则为
+move（n,a,b,c）= move（n,a,c,b）、a-》c、move（n,b,a,c）
+2.设定递归终结条件
+思路：考虑起始塔剩下2个盘如何移动到目标塔的方法，也分三步
+1.起始塔-》目标塔
+2.起始塔-》第">
   
     <link rel="alternate" href="/atom.xml" title="睿宝之家" type="application/atom+xml">
   
@@ -69,14 +97,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-全家福第一版" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-python-hannota" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/07/13/全家福第一版/" class="article-date">
-  <time datetime="2013-07-13T12:46:25.000Z" itemprop="datePublished">2013-07-13</time>
+    <a href="/2017/03/23/python-hannota/" class="article-date">
+  <time datetime="2017-03-23T08:51:18.279Z" itemprop="datePublished">2017-03-23</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/tech/">tech</a>►<a class="article-category-link" href="/categories/tech/python-code/">python code</a>
   </div>
 
   </div>
@@ -87,7 +115,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      全家福第一版
+      python实现汉诺塔
     </h1>
   
 
@@ -95,17 +123,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>第一版的全家福，放给大家看看！希望大家喜欢哟。<br><a id="more"></a></p>
-<h2 id="IMG-9186"><a href="#IMG-9186" class="headerlink" title="IMG_9186"></a>IMG_9186</h2><p><img src="/img/IMG_9186.JPG" alt="9186"></p>
-<p>话说好胖啊,都！</p>
+        <p><strong>1.建立递推规则</strong></p>
+<pre><code>思路：将第n个盘子从a放到c可以分三步走：
+1.将n-1个盘子从a经过c放到b
+2.将a中剩下的第n个盘子放到c
+3.将n-1个盘子从b经过a放到b
+即：递推规则为
+move（n,a,b,c）= move（n,a,c,b）、a-》c、move（n,b,a,c）
+</code></pre><p><strong>2.设定递归终结条件</strong></p>
+<pre><code>思路：考虑起始塔剩下2个盘如何移动到目标塔的方法，也分三步
+1.起始塔-》目标塔
+2.起始塔-》第三方塔
+3.第三方塔-》目标塔
+</code></pre><p><strong>3.小技巧</strong></p>
+<pre><code>将所有参数封装到一个长度为4的list中，设为paras，paras[0]存放盘数，paras[1]代表起始塔，paras[2]代表第三方塔，paras[3]代表目标塔。注意递归调用时，参数list的调整。
+</code></pre><p><strong>3.代码实现</strong>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">def move(paras):</div><div class="line">	if paras[0] == 2:</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[2])</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[3])</div><div class="line">		print(paras[2]+&apos;-&gt;&apos;+paras[3])</div><div class="line">	else:</div><div class="line">		newparas1=[paras[0]-1,paras[1],paras[3],paras[2]]</div><div class="line">		move(newparas1)</div><div class="line">		print(paras[1]+&apos;-&gt;&apos;+paras[3])</div><div class="line">		newparas2=[paras[0]-1,paras[2],paras[1],paras[3]]</div><div class="line">		move(newparas2)</div><div class="line"></div><div class="line">move([3,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;])</div></pre></td></tr></table></figure>
+<p><strong>4.实验结果</strong> </p>
+<pre><code>a-&gt;c
+a-&gt;b
+c-&gt;b
+a-&gt;c
+b-&gt;a
+b-&gt;c
+a-&gt;c
+[Finished in 0.2s]
+</code></pre><p><strong> coded by nicky from scuec</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/07/13/全家福第一版/" data-id="cj0m605z90001icqu1nrelz7a" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/03/23/python-hannota/" data-id="cj0m605yt0000icqux3qpg1dh" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Games/">Games</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PS3/">PS3</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hannor-tower/">hannor tower</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </footer>
   </div>
@@ -113,15 +164,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/23/python-hannota/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          python实现汉诺塔
-        
-      </div>
-    </a>
   
+    <a href="/2013/07/13/全家福第一版/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">全家福第一版</div>
+    </a>
   
 </nav>
 
